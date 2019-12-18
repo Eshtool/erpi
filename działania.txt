@@ -1,3 +1,7 @@
+WYKORZYSTYWANE TECHNOLOGIE:
+	-javascript
+	-node.js
+
 1. Utworzenie projektu
 2. Utworzenie aplikacji google action o nazwie erpi
 3. id projektu erpi-1d8e0
@@ -6,3 +10,5 @@
 	-pomieszczenia
 	-urządzenia
 	-akcje urządzeń
+6. Tworzenie dialogflow:
+	-wykorzystuje słownik synonimów
