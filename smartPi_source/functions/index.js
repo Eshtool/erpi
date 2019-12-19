@@ -13,15 +13,8 @@ const app = dialogflow({debug: true});
 admin.initializeApp();
 const firebaseRef = admin.database().ref('/');
 
-// zbiory  do rejestracji urzdzeń
-// const bathroom = new set('światło'); // setOfWords.has("zythum") => true/false
-// const livingroom = new set('światło');
-// const hall = new set('światło');
-// const bedroom = new set('światło');
-// const garage = new set('światło');
-// const kitchen = new set('światło');
-// const toilet = new set('światło');
-
+// lista pomieszczeń
+var rooms = ['salon', 'sypialnia', 'gabinet', 'kuchnia', 'korytaż', 'toaleta', 'łazienka', 'garaż'];
 
 app.intent('garageDoorAction', (conv, {deviceGarageDoor, room, garageDoorAction}) => {
   const act = garageDoorAction;
@@ -31,14 +24,28 @@ app.intent('garageDoorAction', (conv, {deviceGarageDoor, room, garageDoorAction}
 });
 
 app.intent('lightAction', (conv, {actionLight, deviceLight, room}) => {
-  var action = actionLight + 'am';
-  var params = {'włącz': true, 'wyłącz': false};
+  const action = actionLight + 'am';
+  const params = {'włącz': true, 'wyłącz': false};
 
   const ref = firebaseRef.child(room).child('światło');
   const state = {OnOff: params[actionLight]};
   ref.update(state)
       .then(() => state);
   return conv.ask(action + ' w pomieszczeniu ' + room);
+});
+
+app.intent('lightAllAction', (conv, {actionLight}) => {
+  const action = actionLight + 'am';
+  const params = {'włącz': true, 'wyłącz': false};
+
+  rooms.forEach((room) => {
+    const ref = firebaseRef.child(room).child('światło');
+    const state = {OnOff: params[actionLight]};
+    ref.update(state)
+        .then(() => state);
+  });
+
+  return conv.ask(action + ' wszystkie światła');
 });
 
 
