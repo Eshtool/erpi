@@ -95,7 +95,9 @@ app.intent('deviceAllTimerAction', (conv, {time, trait, device}) => {
 });
 
 app.intent('deviceTimerAction', (conv, {trait, time, room, device}) => {
-  if (true) {
+  if (rooms[room].includes(device) &&
+      devices[device].includes(trait) &&
+      devices[device].includes('timer')) {
     const ref = firebaseRef.child(room).child(device).child('timer');
     const state = {TimerOnOff: params[trait]};
     const timerState = {Timer: time};
@@ -110,5 +112,38 @@ app.intent('deviceTimerAction', (conv, {trait, time, room, device}) => {
   }
 });
 
+app.intent('resetTimerAction', (conv, {room, device}) => {
+  if (rooms[room].includes(device) &&
+      devices[device].includes('timer')) {
+    const ref = firebaseRef.child(room).child(device).child('timer');
+    const state = {TimerOnOff: 'none'};
+    const timerState = {Timer: 'none'};
+    ref.update(state)
+        .then(() => state);
+    ref.update(timerState)
+        .then(() => timerState);
+    return conv.ask('Zresetowano timer' );
+  } else {
+    return conv.ask('Nie mogę tego zrobić. \n' +
+        ' Czy mogę dla ciebie zrobić coś innego?');
+  }
+});
 
+app.intent('resetAllTimerAction', (conv, {device}) => {
+  // eslint-disable-next-line guard-for-in
+  if (devices[device].includes('timer')) {
+    for (const room in rooms) {
+      if (rooms[room].includes(device)) {
+        const ref = firebaseRef.child(room).child(device).child('timer');
+        const state = {TimerOnOff: 'none'};
+        const timerState = {Timer: 'none'};
+        ref.update(state)
+            .then(() => state);
+        ref.update(timerState)
+            .then(() => timerState);
+      }
+    }
+    return conv.ask('Zresetowano timery' );
+  } else return conv.ask(device + 'nie ma funkcji timer.');
+});
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
