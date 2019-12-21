@@ -14,14 +14,9 @@ admin.initializeApp();
 const firebaseRef = admin.database().ref('/');
 
 // lista pomieszczeń
-var rooms = ['salon', 'sypialnia', 'gabinet', 'kuchnia', 'korytaż', 'toaleta', 'łazienka', 'garaż'];
+const rooms = ['salon', 'sypialnia', 'gabinet', 'kuchnia',
+  'korytarz', 'toaleta', 'łazienka', 'pokój dziecięcy', 'garaż'];
 
-app.intent('garageDoorAction', (conv, {deviceGarageDoor, room, garageDoorAction}) => {
-  const act = garageDoorAction;
-  const ro = room;
-  // var dev = device;
-  return conv.ask('Robi się' + act + ro);
-});
 
 app.intent('lightAction', (conv, {actionLight, deviceLight, room}) => {
   const action = actionLight + 'am';
@@ -37,7 +32,6 @@ app.intent('lightAction', (conv, {actionLight, deviceLight, room}) => {
 app.intent('lightAllAction', (conv, {actionLight}) => {
   const action = actionLight + 'am';
   const params = {'włącz': true, 'wyłącz': false};
-
   rooms.forEach((room) => {
     const ref = firebaseRef.child(room).child('światło');
     const state = {OnOff: params[actionLight]};
@@ -45,7 +39,39 @@ app.intent('lightAllAction', (conv, {actionLight}) => {
         .then(() => state);
   });
 
-  return conv.ask(action + ' wszystkie światła');
+  return conv.ask(action + ' wszystkie światła' );
+});
+
+app.intent('lightAllTimerAction', (conv, {actionLight, time}) => {
+  const action = actionLight + 'enia';
+  const params = {'włącz': true, 'wyłącz': false};
+  rooms.forEach((room) => {
+    const ref = firebaseRef.child(room).child('światło').child('timer');
+    const state = {TimerOnOff: params[actionLight]};
+    // eslint-disable-next-line camelcase
+    const timerState = {Timer: time};
+    ref.update(state)
+        .then(() => state);
+    ref.update(timerState)
+        .then(() => timerState);
+  });
+  return conv.ask('Odliczam czas do ' + action +
+      ' wszystkich świateł. Czy coś jeszcze?' );
+});
+
+app.intent('lightTimerAction', (conv, {actionLight, time, room}) => {
+  const action = actionLight + 'enia';
+  const params = {'włącz': true, 'wyłącz': false};
+  const ref = firebaseRef.child(room).child('światło').child('timer');
+  const state = {TimerOnOff: params[actionLight]};
+  // eslint-disable-next-line camelcase
+  const timerState = {Timer: time};
+  ref.update(state)
+      .then(() => state);
+  ref.update(timerState)
+      .then(() => timerState);
+  return conv.ask('Odliczam czas do ' + action +
+      'w pomieszczeniu ' + room );
 });
 
 
