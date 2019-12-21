@@ -93,7 +93,7 @@ app.intent('deviceAllTimerAction', (conv, {time, trait, device}) => {
     return conv.ask('Dobrze. Zaczynam odliczać czas.');
   } else return conv.ask('Nie potrafię tego zrobić.');
 });
-// todo: pojedyńczy timer
+
 app.intent('deviceTimerAction', (conv, {trait, time, room, device}) => {
   if (true) {
     const ref = firebaseRef.child(room).child(device).child('timer');
@@ -103,8 +103,7 @@ app.intent('deviceTimerAction', (conv, {trait, time, room, device}) => {
         .then(() => state);
     ref.update(timerState)
         .then(() => timerState);
-    return conv.ask('Odliczam czas do ' + action +
-        'w pomieszczeniu ' + room );
+    return conv.ask('Zaczynam odliczanie czasu' );
   } else {
     return conv.ask('Nie mogę tego zrobić. \n' +
       ' Czy mogę dla ciebie zrobić coś innego?');
