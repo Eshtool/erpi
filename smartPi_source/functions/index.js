@@ -16,7 +16,7 @@ const firebaseRef = admin.database().ref('/');
 // fynkcje urządzeń
 const devices= {
   'światło': ['włącz', 'wyłącz', 'timer'],
-  'brama': ['otwórz', 'zamknij'],
+  'brama': ['otwórz', 'zamknij', 'timer'],
 };
 
 // lista pomieszczeń
@@ -38,15 +38,23 @@ const params = {
   'otwórz': true,
   'zamknij': false};
 
+// stringi do dialogflow
+const conversationRequest = {
+  'włącz': 'włączam urządzenie',
+  'wyłącz': 'wyłączam urządzenie',
+  'otwórz': 'otwieram urządzenie',
+  'zamknij': 'zamykam urządzenie',
+};
+
 app.intent('deviceOnOffAction', (conv, {trait, device, room}) => {
   // eslint-disable-next-line max-len
   if (rooms[room].includes(device) && devices[device].includes(trait)) {
-    const action = trait + 'am';
     const ref = firebaseRef.child(room).child(device).child('OnOff');
     const state = {On: params[trait]};
     ref.update(state)
         .then(() => state);
-    return conv.ask(action + ' ' + device + ' w pomieszczeniu ' + room);
+    return conv.ask(conversationRequest[trait] + ' ' + device +
+        ' w pomieszczeniu ' + room);
   } else if (rooms[room].includes(device)) {
     return conv.ask('Urządzenie ' + device +
         ' nie posiada tej funkcji');
