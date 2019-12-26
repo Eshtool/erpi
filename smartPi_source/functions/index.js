@@ -3,15 +3,20 @@
 'use strict';
 
 const admin = require('firebase-admin');
-// Initialize Firebase
+//  const util = require('util');
 
+// Initialize Firebase
 const {dialogflow} = require('actions-on-google');
 const functions = require('firebase-functions');
+
 const app = dialogflow({debug: true});
 
 // database initialization
 admin.initializeApp();
+
 const firebaseRef = admin.database().ref('/');
+
+// const defaultDatabaseRef= firebase.database().ref('/');
 
 // fynkcje urządzeń
 const devices= {
@@ -46,7 +51,14 @@ const conversationRequest = {
   'zamknij': 'zamykam urządzenie',
 };
 
-app.intent('deviceOnOffAction', (conv, {trait, device, room}) => {
+const conversationQuery = {
+  'włączone': 'włączone',
+  'wyłączone': 'włączone',
+  'otwarte': 'otwarte',
+  'zamknięte': 'zamknięte',
+};
+
+app.intent('deviceOnOffIntent', (conv, {trait, device, room}) => {
   // eslint-disable-next-line max-len
   if (rooms[room].includes(device) && devices[device].includes(trait)) {
     const ref = firebaseRef.child(room).child(device).child('OnOff');
@@ -64,7 +76,7 @@ app.intent('deviceOnOffAction', (conv, {trait, device, room}) => {
   }
 });
 
-app.intent('deviceAllOnOffAction', (conv, {trait, allThings, device}) => {
+app.intent('deviceAllOnOffIntent', (conv, {trait, allThings, device}) => {
   // eslint-disable-next-line max-len
   if (devices[device].includes(trait)) {
     // eslint-disable-next-line guard-for-in
@@ -84,7 +96,7 @@ app.intent('deviceAllOnOffAction', (conv, {trait, allThings, device}) => {
 });
 
 
-app.intent('deviceAllTimerAction', (conv, {time, trait, device}) => {
+app.intent('deviceAllTimerIntent', (conv, {time, trait, device}) => {
   if (devices[device].includes('timer') && devices[device].includes(trait)) {
     for (const room in rooms) {
       if (rooms[room].includes(device)) {
@@ -102,7 +114,7 @@ app.intent('deviceAllTimerAction', (conv, {time, trait, device}) => {
   } else return conv.ask('Nie potrafię tego zrobić.');
 });
 
-app.intent('deviceTimerAction', (conv, {trait, time, room, device}) => {
+app.intent('deviceTimerIntent', (conv, {trait, time, room, device}) => {
   if (rooms[room].includes(device) &&
       devices[device].includes(trait) &&
       devices[device].includes('timer')) {
@@ -120,12 +132,12 @@ app.intent('deviceTimerAction', (conv, {trait, time, room, device}) => {
   }
 });
 
-app.intent('resetTimerAction', (conv, {room, device}) => {
+app.intent('resetTimerIntent', (conv, {room, device}) => {
   if (rooms[room].includes(device) &&
       devices[device].includes('timer')) {
     const ref = firebaseRef.child(room).child(device).child('timer');
-    const state = {TimerOnOff: 'none'};
-    const timerState = {Timer: 'none'};
+    const state = {TimerOnOff: null};
+    const timerState = {Timer: null};
     ref.update(state)
         .then(() => state);
     ref.update(timerState)
@@ -137,14 +149,14 @@ app.intent('resetTimerAction', (conv, {room, device}) => {
   }
 });
 
-app.intent('resetAllTimerAction', (conv, {device}) => {
+app.intent('resetAllTimerIntent', (conv, {device}) => {
   // eslint-disable-next-line guard-for-in
   if (devices[device].includes('timer')) {
     for (const room in rooms) {
       if (rooms[room].includes(device)) {
         const ref = firebaseRef.child(room).child(device).child('timer');
-        const state = {TimerOnOff: 'none'};
-        const timerState = {Timer: 'none'};
+        const state = {TimerOnOff: null};
+        const timerState = {Timer: null};
         ref.update(state)
             .then(() => state);
         ref.update(timerState)
@@ -154,4 +166,7 @@ app.intent('resetAllTimerAction', (conv, {device}) => {
     return conv.ask('Zresetowano timery' );
   } else return conv.ask(device + 'nie ma funkcji timer.');
 });
+
+
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
+
