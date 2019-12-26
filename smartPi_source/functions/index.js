@@ -59,20 +59,6 @@ function changeState(room, device, refToTrait, state) {
   }
 }
 
-// function changeAllDevicesState(device, trait, refToTrait, state) {
-//   const endRef = '/' + device + refToTrait + '/';
-//   if (devices[device].includes(trait)) {
-//     for (const room in rooms) {
-//       if (rooms[room].includes(device)) {
-//         const ref = '/' + room + endRef;
-//         const traitRef = admin.database().ref(ref);
-//         traitRef.update(state)
-//             .then(() => state);
-//       }
-//     }
-//   }
-// }
-
 app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
   let state;
   let parameter;
@@ -90,7 +76,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
           state = {on: true};
           parameter = {timer: time};
           changeState(room, device, refToTrait, state);
-          changeState(room, device, trait, refToTrait, parameter);
+          changeState(room, device, refToTrait, parameter);
         }
         // zwracana odpowiedź
         if ( time !== 'false') return conv.ask('Włączam odliczanie.');
@@ -119,7 +105,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
           state = {on: false};
           parameter = {timer: time};
           changeState(room, device, refToTrait, state);
-          changeState(room, device, trait, refToTrait, parameter);
+          changeState(room, device, refToTrait, parameter);
         }
         // zwracana odpowiedź
         if ( time !== 'false') return conv.ask('Włączam odliczanie.');
@@ -148,7 +134,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
           state = {on: true};
           parameter = {timer: time};
           changeState(room, device, refToTrait, state);
-          changeState(room, device, trait, refToTrait, parameter);
+          changeState(room, device, refToTrait, parameter);
         }
         // zwracana odpowiedź
         if ( time !== 'false') return conv.ask('Włączam odliczanie.');
@@ -176,7 +162,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
           state = {open: false};
           parameter = {timer: time};
           changeState(room, device, refToTrait, state);
-          changeState(room, device, trait, refToTrait, parameter);
+          changeState(room, device, refToTrait, parameter);
         }
         // zwracana odpowiedź
         if ( time !== 'false') return conv.ask('Włączam odliczanie.');
@@ -197,12 +183,12 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
   }
 });
 
-app.intent('resetTimerIntent', (conv, {device, room}) => {
+app.intent('resetIntent', (conv, {device, room}) => {
   const refToTrait = 'Timer';
   const state = {on: null};
   const parameter = {timer: null};
-  changeState(room, refToTrait, state);
-  changeState(room, refToTrait, parameter);
+  changeState(room, device, refToTrait, state);
+  changeState(room, device, refToTrait, parameter);
   return conv.ask('Wyłączam odliczanie');
 });
 // app.intent('deviceAllOnOffIntent', (conv, {trait, allThings, device}) => {
