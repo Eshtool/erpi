@@ -22,8 +22,8 @@ const firebaseRef = admin.database().ref('/');
 const devices= {
   'światło': ['włącz', 'wyłącz'],
   'brama': ['otwórz', 'zamknij'],
-  'telewizor': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz'],
-  'radio': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz'],
+  'telewizor': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz', 'volume'],
+  'radio': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz', 'volume'],
 };
 
 // lista pomieszczeń
@@ -249,6 +249,26 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
           return conv.ask('Zrobione');
         } else if (rooms[room].includes(device)) {
           return conv.ask( 'Wyciszono ' + device + ' w pomieszczeniu ' + room);
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+    case 'volume':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = number;
+        refToTrait = 'Volume';
+        state = {volume: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask('Ustawiam głośność na ' + number + ' procent' );
         } else {
           return conv.ask('Brak urządzenia ' + device +
               ' w pomieszczeniu ' + room);
