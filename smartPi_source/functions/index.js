@@ -22,8 +22,10 @@ const firebaseRef = admin.database().ref('/');
 const devices= {
   'światło': ['włącz', 'wyłącz'],
   'brama': ['otwórz', 'zamknij'],
-  'telewizor': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz', 'volume'],
-  'radio': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz', 'volume'],
+  'telewizor': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz',
+    'wycisz', 'volume', 'channel', 'next channel', 'previous channel'],
+  'radio': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz',
+    'volume', 'channel', 'next channel', 'previous channel'],
 };
 
 // lista pomieszczeń
@@ -269,6 +271,66 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
           return conv.ask('Zrobione');
         } else if (rooms[room].includes(device)) {
           return conv.ask('Ustawiam głośność na ' + number + ' procent' );
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+    case 'channel':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = number;
+        refToTrait = 'Channel';
+        state = {channel: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask('Włączam kanał numer ' + number);
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+    case 'next channel':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = '+1';
+        refToTrait = 'Channel';
+        state = {channel: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask( 'Następny kanał');
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+    case 'previous channel':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = '-1';
+        refToTrait = 'Channel';
+        state = {channel: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask( 'Poprzedni kanał');
         } else {
           return conv.ask('Brak urządzenia ' + device +
               ' w pomieszczeniu ' + room);
