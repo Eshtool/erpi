@@ -20,12 +20,12 @@ const firebaseRef = admin.database().ref('/');
 
 // fynkcje urządzeń
 const devices= {
-  'światło': ['włącz', 'wyłącz'],
-  'brama': ['otwórz', 'zamknij'],
-  'telewizor': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz',
-    'wycisz', 'volume', 'channel', 'next channel', 'previous channel'],
-  'radio': ['włącz', 'wyłącz', 'podgłośnij', 'zcisz', 'wycisz',
-    'volume', 'channel', 'next channel', 'previous channel'],
+  'światło': ['ON', 'OFF'],
+  'brama': ['OPEN', 'CLOSE'],
+  'telewizor': ['ON', 'OFF', 'volume up', 'volume down',
+    'mute', 'channel', 'next channel', 'previous channel'],
+  'radio': ['ON', 'OFF', 'volume up', 'volume down', 'mute',
+    'channel', 'next channel', 'previous channel'],
 };
 
 // lista pomieszczeń
@@ -66,7 +66,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
   let parameter;
   let refToTrait;
   switch (trait) {
-    case 'włącz':
+    case 'ON':
       if (devices[device].includes(trait)) {
         // zmiana stanu
         if (time === 'false') {
@@ -95,7 +95,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
       break;
-    case 'wyłącz':
+    case 'OFF':
       if (devices[device].includes(trait)) {
         // zmiana stanu
         if (time === 'false') {
@@ -124,7 +124,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
       break;
-    case 'otwórz':
+    case 'OPEN':
       if (devices[device].includes(trait)) {
         // zmiana stanu
         if (time === 'false') {
@@ -152,7 +152,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
       break;
-    case 'zamknij':
+    case 'CLOSE':
       if (devices[device].includes(trait)) {
         // zmiana stanu
         if (time === 'false') {
@@ -198,7 +198,7 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
   let refToTrait;
 
   switch (mediaTrait) {
-    case 'podgłośnij':
+    case 'volume up':
       if (devices[device].includes(mediaTrait)) {
         parameter = '+' + number;
         refToTrait = 'Volume';
@@ -210,7 +210,7 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
           return conv.ask('Zrobione');
         } else if (rooms[room].includes(device)) {
           return conv.ask( 'Podgłaśniam  o ' +
-              number + ' procent');
+              number);
         } else {
           return conv.ask('Brak urządzenia ' + device +
               ' w pomieszczeniu ' + room);
@@ -219,7 +219,7 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
 
-    case 'zcisz':
+    case 'volume down':
       if (devices[device].includes(mediaTrait)) {
         parameter = '-' + number;
         refToTrait = 'Volume';
@@ -230,8 +230,8 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
         if (room === 'wszystkie') {
           return conv.ask('Zrobione');
         } else if (rooms[room].includes(device)) {
-          return conv.ask( 'Zciszam  o ' +
-              number + ' procent');
+          return conv.ask( 'Ściszam  o ' +
+              number );
         } else {
           return conv.ask('Brak urządzenia ' + device +
               ' w pomieszczeniu ' + room);
@@ -239,7 +239,7 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
       } else {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
-    case 'wycisz':
+    case 'mute':
       if (devices[device].includes(mediaTrait)) {
         parameter = '0';
         refToTrait = 'Volume';
@@ -251,26 +251,6 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
           return conv.ask('Zrobione');
         } else if (rooms[room].includes(device)) {
           return conv.ask( 'Wyciszono ' + device + ' w pomieszczeniu ' + room);
-        } else {
-          return conv.ask('Brak urządzenia ' + device +
-              ' w pomieszczeniu ' + room);
-        }
-      } else {
-        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
-      }
-
-    case 'volume':
-      if (devices[device].includes(mediaTrait)) {
-        parameter = number;
-        refToTrait = 'Volume';
-        state = {volume: parameter};
-        changeState(room, device, refToTrait, state);
-
-        // zwracana odpowiedź
-        if (room === 'wszystkie') {
-          return conv.ask('Zrobione');
-        } else if (rooms[room].includes(device)) {
-          return conv.ask('Ustawiam głośność na ' + number + ' procent' );
         } else {
           return conv.ask('Brak urządzenia ' + device +
               ' w pomieszczeniu ' + room);
