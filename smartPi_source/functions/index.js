@@ -19,13 +19,17 @@ const firebaseRef = admin.database().ref('/');
 // const defaultDatabaseRef= firebase.database().ref('/');
 
 // fynkcje urządzeń
+// Lista dostępnych funkcji
+// [ ON, OFF, OPEN, CLOSE, luminosity, luminosity up, luminosity down,
+// channel, next channel, previous channel, volume up, volume down, mute]
 const devices= {
-  'światło': ['ON', 'OFF'],
+  'światło': ['ON', 'OFF', 'luminosity', 'luminosity up', 'luminosity down'],
   'brama': ['OPEN', 'CLOSE'],
   'telewizor': ['ON', 'OFF', 'volume up', 'volume down',
     'mute', 'channel', 'next channel', 'previous channel'],
   'radio': ['ON', 'OFF', 'volume up', 'volume down', 'mute',
     'channel', 'next channel', 'previous channel'],
+  'wentylator': ['ON', 'OFF'],
 };
 
 // lista pomieszczeń
@@ -33,10 +37,10 @@ const rooms = {
   'salon': ['światło', 'klimatyzator', 'telewizor', 'radio'],
   'sypialnia': ['światło', 'klimatyzator'],
   'gabinet': ['światło', 'klimatyzator'],
-  'kuchnia': ['światło', 'radio'],
+  'kuchnia': ['światło', 'radio', 'wentylator'],
   'korytarz': ['światło'],
-  'toaleta': ['światło'],
-  'łazienka': ['światło'],
+  'toaleta': ['światło', 'wentylator'],
+  'łazienka': ['światło', 'wentylator'],
   'pokój dziecięcy': ['światło', 'klimatyzator'],
   'garaż': ['światło', 'brama']};
 
@@ -319,9 +323,78 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
 
+    case 'luminosity':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = true;
+        refToTrait = 'OnOff';
+        state = {on: parameter};
+        changeState(room, device, refToTrait, state);
+
+        parameter = number;
+        refToTrait = 'Luminosity';
+        state = {luminosity: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask('Ustawiam jasność na ' + number + ' procent.');
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+    case 'luminosity up':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = '+' + number;
+        refToTrait = 'Luminosity';
+        state = {luminosity: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask( 'Rozjaśniam  światło o ' +
+              number + ' procent');
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+    case 'luminosity down':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = '-' + number;
+        refToTrait = 'Luminosity';
+        state = {luminosity: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask( 'Wygaszam światło  o ' +
+              number + ' procent');
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+
     default: return conv.ask('Nie rozumiem polecenia.');
   }
 });
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
+// todo: walidacja liczb, klima temp +/-
