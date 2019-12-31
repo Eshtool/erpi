@@ -30,6 +30,7 @@ const devices= {
   'radio': ['ON', 'OFF', 'volume up', 'volume down', 'mute',
     'channel', 'next channel', 'previous channel'],
   'wentylator': ['ON', 'OFF'],
+  'klimatyzator': ['ON', 'OFF', 'temperature up', 'temperature down'],
 };
 
 // lista pomieszczeń
@@ -63,6 +64,15 @@ function changeState(room, device, refToTrait, state) {
     traitRef.update(state)
         .then(() => state);
   }
+}
+
+// funkcja walidująca wprowadzane parametry w postaci wartości liczbowych
+// eslint-disable-next-line camelcase,require-jsdoc
+function parameter_validate(min, max, value) {
+  let parsedValue = parseInt(value);
+  if (parsedValue < min) parsedValue = min;
+  else if (parsedValue > max) parsedValue = max;
+  return parsedValue;
 }
 
 app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
@@ -200,10 +210,21 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
   let state;
   let parameter;
   let refToTrait;
+  // założenia min i max wartości parametrów
+  const volMax = 100;
+  const volMin = 1;
+  const lumMax = 100;
+  const lumMin = 5;
+  const channMax = 150;
+  const channMin = 1;
+  const tempMax = 14;
+  const tempMin = 1;
 
   switch (mediaTrait) {
     case 'volume up':
       if (devices[device].includes(mediaTrait)) {
+        number = parameter_validate(volMin, volMax, number);
+
         parameter = '+' + number;
         refToTrait = 'Volume';
         state = {volume: parameter};
@@ -225,6 +246,8 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
     case 'volume down':
       if (devices[device].includes(mediaTrait)) {
+        number = parameter_validate(volMin, volMax, number);
+
         parameter = '-' + number;
         refToTrait = 'Volume';
         state = {volume: parameter};
@@ -243,9 +266,10 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
       } else {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
+
     case 'mute':
       if (devices[device].includes(mediaTrait)) {
-        parameter = '0';
+        parameter = '-100';
         refToTrait = 'Volume';
         state = {volume: parameter};
         changeState(room, device, refToTrait, state);
@@ -265,7 +289,9 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
     case 'channel':
       if (devices[device].includes(mediaTrait)) {
-        parameter = number;
+        number = parameter_validate(channMin, channMax, number);
+
+        parameter = '' + number;
         refToTrait = 'Channel';
         state = {channel: parameter};
         changeState(room, device, refToTrait, state);
@@ -330,7 +356,9 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
         state = {on: parameter};
         changeState(room, device, refToTrait, state);
 
-        parameter = number;
+        number = parameter_validate(lumMin, lumMax, number);
+
+        parameter = '' + number;
         refToTrait = 'Luminosity';
         state = {luminosity: parameter};
         changeState(room, device, refToTrait, state);
@@ -350,6 +378,8 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
     case 'luminosity up':
       if (devices[device].includes(mediaTrait)) {
+        number = parameter_validate(lumMin, lumMax, number);
+
         parameter = '+' + number;
         refToTrait = 'Luminosity';
         state = {luminosity: parameter};
@@ -371,6 +401,8 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
     case 'luminosity down':
       if (devices[device].includes(mediaTrait)) {
+        number = parameter_validate(lumMin, lumMax, number);
+
         parameter = '-' + number;
         refToTrait = 'Luminosity';
         state = {luminosity: parameter};
