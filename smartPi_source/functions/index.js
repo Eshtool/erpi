@@ -475,4 +475,4 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
-// todo: nawiew +/- autoq
+// todo: nawiew +/- auto
