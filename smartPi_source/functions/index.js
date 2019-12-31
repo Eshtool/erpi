@@ -422,6 +422,52 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
 
+    case 'temperature up':
+      if (devices[device].includes(mediaTrait)) {
+        number = parameter_validate(tempMin, tempMax, number);
+
+        parameter = '+' + number;
+        refToTrait = 'Temp';
+        state = {temp: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask( 'Podnoszę temperaturę o' +
+              number );
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
+    case 'temperature down':
+      if (devices[device].includes(mediaTrait)) {
+        number = parameter_validate(tempMin, tempMax, number);
+
+        parameter = '-' + number;
+        refToTrait = 'Temp';
+        state = {temp: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask( 'Obniżam temperaturę o' +
+              number );
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
 
     default: return conv.ask('Nie rozumiem polecenia.');
   }
@@ -429,4 +475,4 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
-// todo: walidacja liczb, klima temp +/-
+// todo: nawiew +/- autoq
