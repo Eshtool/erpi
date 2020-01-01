@@ -21,7 +21,8 @@ const firebaseRef = admin.database().ref('/');
 // fynkcje urządzeń
 // Lista dostępnych funkcji
 // [ ON, OFF, OPEN, CLOSE, luminosity, luminosity up, luminosity down,
-// channel, next channel, previous channel, volume up, volume down, mute]
+// channel, next channel, previous channel, volume up, volume down, mute,
+// temperature up, temperatyre down, airflow auto]
 const devices= {
   'światło': ['ON', 'OFF', 'luminosity', 'luminosity up', 'luminosity down'],
   'brama': ['OPEN', 'CLOSE'],
@@ -30,7 +31,7 @@ const devices= {
   'radio': ['ON', 'OFF', 'volume up', 'volume down', 'mute',
     'channel', 'next channel', 'previous channel'],
   'wentylator': ['ON', 'OFF'],
-  'klimatyzator': ['ON', 'OFF', 'temperature up', 'temperature down'],
+  'klimatyzator': ['ON', 'OFF', 'temperature up', 'temperature down', 'airflow auto'],
 };
 
 // lista pomieszczeń
@@ -468,6 +469,27 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
         return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
       }
 
+    case 'airflow auto':
+      if (devices[device].includes(mediaTrait)) {
+        parameter = 'auto';
+        refToTrait = 'Airflow';
+        state = {airflow: parameter};
+        changeState(room, device, refToTrait, state);
+
+        // zwracana odpowiedź
+        if (room === 'wszystkie') {
+          return conv.ask('Zrobione');
+        } else if (rooms[room].includes(device)) {
+          return conv.ask( 'Włączam tryb auto klimatyzacji w pomieszczeniu ' +
+              room);
+        } else {
+          return conv.ask('Brak urządzenia ' + device +
+              ' w pomieszczeniu ' + room);
+        }
+      } else {
+        return conv.ask('Urządzenie ' + device + ' nie posiada tej funkcji');
+      }
+
 
     default: return conv.ask('Nie rozumiem polecenia.');
   }
@@ -475,4 +497,4 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
-// todo: nawiew +/- auto
+// todo: nawiew +/-
