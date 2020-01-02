@@ -601,22 +601,41 @@ app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
       return conv.ask('Zresetowano wszystkie urządzenia.');
 
     case 'going sleep':
-      const devToOff = ['telewizor', 'radio', 'światło', 'wentylator'];
-      const devToClose = ['brama'];
-      refToTrait = 'OnOff';
-      state = {on: false};
-      // eslint-disable-next-line guard-for-in
-      for (const dev in devToOff) {
-        changeState(allRooms, devToOff[dev], refToTrait, state);
-      }
-      refToTrait = 'OpenClose';
-      state = {open: false};
-      // eslint-disable-next-line max-len,guard-for-in
-      for (const dev in devToClose) {
-        changeState(allRooms, devToClose[dev], refToTrait, state);
-      }
+      changeState(allRooms, 'światło', 'OnOff', {on: false});
+      changeState(allRooms, 'wentylator', 'OnOff', {on: false});
+      changeState(allRooms, 'telewizor', 'OnOff', {on: false});
+      changeState(allRooms, 'radio', 'OnOff', {on: false});
+      changeState(allRooms, 'brama', 'OpenClose', {open: false});
       return conv.close('Dobranoc. Do zobaczenia jutro! ');
 
+    case 'going out':
+      changeState(allRooms, 'światło', 'OnOff', {on: false});
+      changeState(allRooms, 'wentylator', 'OnOff', {on: false});
+      changeState(allRooms, 'telewizor', 'OnOff', {on: false});
+      changeState(allRooms, 'radio', 'OnOff', {on: false});
+      changeState(allRooms, 'brama', 'OpenClose', {open: false});
+      // eslint-disable-next-line max-len
+      return conv.close('Przygotowuję dom do twojej nieobecności. To do zobaczenia.');
+
+    case 'wakeing up':
+      const lightOnRooms = ['sypialnia', 'korytarz', 'łazienka', 'toaleta', 'kuchnia'];
+      for (const room in lightOnRooms){
+        state = {on: true};
+        refToTrait = 'OnOff';
+        changeState(lightOnRooms[room], 'światło', 'OnOff', state);
+      }
+      const luminosityRooms = ['sypialnia', 'korytarz', 'toaleta'];
+      for (const room in luminosityRooms){
+        state = {luminosity: '60'};
+        refToTrait = 'Luminosity';
+        changeState(luminosityRooms[room], 'światło', refToTrait, state);
+      }
+
+      changeState('kuchnia', 'radio', 'OnOff', {on: true});
+      changeState('kuchnia', 'radio', 'Volume', {on: '-100'});
+      changeState('kuchnia', 'radio', 'Volume', {on: '+25'});
+      // eslint-disable-next-line max-len
+      return conv.ask('Witaj! Życzę ci miłego dnia.');
     default: return conv.ask('Nie rozumiem polecenia.');
   }
 });
