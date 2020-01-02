@@ -47,6 +47,17 @@ const rooms = {
   'pokój dziecięcy': ['światło', 'klimatyzator'],
   'garaż': ['światło', 'brama']};
 
+// założenia min i max wartości parametrów
+const volMax = 100;
+const volMin = 1;
+const lumMax = 100;
+const lumMin = 5;
+const channMax = 150;
+const channMin = 1;
+const tempMax = 14;
+const tempMin = 1;
+const airFlowMax = 4;
+const airFlowMin = 1;
 
 // eslint-disable-next-line require-jsdoc
 function changeState(room, device, refToTrait, state) {
@@ -149,7 +160,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
           changeState(room, device, refToTrait, state);
         } else {
           refToTrait = 'Timer';
-          state = {on: true};
+          state = {open: true};
           parameter = {timer: time};
           changeState(room, device, refToTrait, state);
           changeState(room, device, refToTrait, parameter);
@@ -172,7 +183,7 @@ app.intent('deviceIntent', (conv, {trait, device, room, time}) => {
       if (devices[device].includes(trait)) {
         // zmiana stanu
         if (time === 'false') {
-          state = {on: false};
+          state = {open: false};
           refToTrait = 'OpenClose';
           changeState(room, device, refToTrait, state);
         } else {
@@ -212,17 +223,6 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
   let state;
   let parameter;
   let refToTrait;
-  // założenia min i max wartości parametrów
-  const volMax = 100;
-  const volMin = 1;
-  const lumMax = 100;
-  const lumMin = 5;
-  const channMax = 150;
-  const channMin = 1;
-  const tempMax = 14;
-  const tempMin = 1;
-  const airFlowMax = 4;
-  const airFlowMin = 1;
 
   switch (mediaTrait) {
     case 'volume up':
@@ -544,6 +544,37 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
   }
 });
 
+app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
+  let state;
+  let parameter;
+  let refToTrait;
+
+
+  switch (scenarioTrait) {
+    case 'going sleep':
+      const devToOff = ['telewizor', 'radio', 'światło', 'wentylator'];
+      const devToClose = ['brama'];
+      const allRooms = 'wszystkie';
+
+      refToTrait = 'OnOff';
+      state = {on: false};
+
+      // eslint-disable-next-line guard-for-in
+      for (const dev in devToOff) {
+        changeState(allRooms, devToOff[dev], refToTrait, state);
+      }
+
+      refToTrait = 'OpenClose';
+      state = {open: false};
+      // eslint-disable-next-line max-len,guard-for-in
+      for (const dev in devToClose) {
+        changeState(allRooms, devToClose[dev], refToTrait, state);
+      }
+      return conv.close('Dobranoc. Do zobaczenia jutro! ');
+      break;
+    default: return conv.ask('Nie rozumiem polecenia.');
+  }
+});
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
-// todo: scenarisze dobranoc; dzień dobry; wychodzę
+// todo: scenarisze : dzień dobry; wychodzę;  resetuj dom
