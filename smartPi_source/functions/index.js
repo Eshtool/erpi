@@ -548,22 +548,67 @@ app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
   let state;
   let parameter;
   let refToTrait;
-
+  const allRooms = 'wszystkie';
 
   switch (scenarioTrait) {
+    case 'home reset':
+      const traitsToReset = {
+        'ON': {refToTrait: 'OnOff', state: {on: false}},
+        'OPEN': {refToTrait: 'OpenClose', state: {open: false}},
+        'luminosity': {refToTrait: 'Luminosity', state: {luminosity: '100'}},
+        'channel': {refToTrait: 'Channel', state: {channel: '1'}},
+        'volume down': {refToTrait: 'Volume', state: {volume: '-1'}},
+        'temperatyre down': {refToTrait: 'Temp', state: {temp: '+1'}},
+        'airflow auto': {refToTrait: 'Airflow', state: {airflow: 'auto'}},
+      };
+
+      // reset timerów
+      const timersToReset = {
+        // eslint-disable-next-line max-len
+        'ON': {refToTrait: 'Timer', state1: {on: false}, state2: {timer: false}},
+        // eslint-disable-next-line max-len
+        'OPEN': {refToTrait: 'Timer', state1: {open: false}, state2: {timer: false}},
+      };
+
+      const devicesTab = Object.keys(devices);
+      const traitsTab = Object.keys(traitsToReset);
+      const timerTraidsTab = Object.keys(timersToReset);
+
+      // eslint-disable-next-line guard-for-in
+      for (const keyDev in devicesTab) {
+        const deviceName = devicesTab[keyDev];
+        // eslint-disable-next-line guard-for-in
+        for (const keyTrait in traitsTab) {
+          const trait = traitsTab[keyTrait];
+          const device = devices[deviceName];
+          if (device.includes(trait)) {
+            // eslint-disable-next-line max-len
+            changeState(allRooms, deviceName, traitsToReset[trait].refToTrait, traitsToReset[trait].state);
+          }
+        }
+        // eslint-disable-next-line guard-for-in
+        for (const keyTrait in timerTraidsTab) {
+          const trait = timerTraidsTab[keyTrait];
+          const device = devices[deviceName];
+          if (device.includes(trait)) {
+            // eslint-disable-next-line max-len
+            changeState(allRooms, deviceName, timersToReset[trait].refToTrait, timersToReset[trait].state1);
+            // eslint-disable-next-line max-len
+            changeState(allRooms, deviceName, timersToReset[trait].refToTrait, timersToReset[trait].state2);
+          }
+        }
+      }
+      return conv.ask('Zresetowano wszystkie urządzenia.');
+
     case 'going sleep':
       const devToOff = ['telewizor', 'radio', 'światło', 'wentylator'];
       const devToClose = ['brama'];
-      const allRooms = 'wszystkie';
-
       refToTrait = 'OnOff';
       state = {on: false};
-
       // eslint-disable-next-line guard-for-in
       for (const dev in devToOff) {
         changeState(allRooms, devToOff[dev], refToTrait, state);
       }
-
       refToTrait = 'OpenClose';
       state = {open: false};
       // eslint-disable-next-line max-len,guard-for-in
@@ -571,10 +616,11 @@ app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
         changeState(allRooms, devToClose[dev], refToTrait, state);
       }
       return conv.close('Dobranoc. Do zobaczenia jutro! ');
-      break;
+
     default: return conv.ask('Nie rozumiem polecenia.');
   }
 });
+
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
-// todo: scenarisze : dzień dobry; wychodzę;  resetuj dom
+// todo: scenarisze : dzień dobry; wychodzę;
