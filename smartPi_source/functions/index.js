@@ -14,9 +14,6 @@ const app = dialogflow({debug: true});
 // database initialization
 admin.initializeApp();
 
-const firebaseRef = admin.database().ref('/');
-
-// const defaultDatabaseRef= firebase.database().ref('/');
 
 // fynkcje urządzeń
 // Lista dostępnych funkcji
@@ -546,7 +543,6 @@ app.intent('mediaIntent', (conv, {mediaTrait, device, room, number}) => {
 
 app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
   let state;
-  let parameter;
   let refToTrait;
   const allRooms = 'wszystkie';
 
@@ -558,7 +554,7 @@ app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
         'luminosity': {refToTrait: 'Luminosity', state: {luminosity: '100'}},
         'channel': {refToTrait: 'Channel', state: {channel: '1'}},
         'volume down': {refToTrait: 'Volume', state: {volume: '-1'}},
-        'temperatyre down': {refToTrait: 'Temp', state: {temp: '+1'}},
+        'temperature down': {refToTrait: 'Temp', state: {temp: '+1'}},
         'airflow auto': {refToTrait: 'Airflow', state: {airflow: 'auto'}},
       };
 
@@ -618,14 +614,17 @@ app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
       return conv.close('Przygotowuję dom do twojej nieobecności. To do zobaczenia.');
 
     case 'wakeing up':
+      // eslint-disable-next-line max-len
       const lightOnRooms = ['sypialnia', 'korytarz', 'łazienka', 'toaleta', 'kuchnia'];
-      for (const room in lightOnRooms){
+      // eslint-disable-next-line guard-for-in
+      for (const room in lightOnRooms) {
         state = {on: true};
         refToTrait = 'OnOff';
         changeState(lightOnRooms[room], 'światło', 'OnOff', state);
       }
       const luminosityRooms = ['sypialnia', 'korytarz', 'toaleta'];
-      for (const room in luminosityRooms){
+      // eslint-disable-next-line guard-for-in
+      for (const room in luminosityRooms) {
         state = {luminosity: '60'};
         refToTrait = 'Luminosity';
         changeState(luminosityRooms[room], 'światło', refToTrait, state);
@@ -642,4 +641,3 @@ app.intent('scenarioIntent', (conv, {scenarioTrait}) => {
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
 
-// todo: scenarisze : dzień dobry; wychodzę;
