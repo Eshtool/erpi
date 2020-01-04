@@ -1,0 +1,9 @@
+{
+  "id": "ab592124-dd10-4551-ad54-d091030d0b35",
+  "name": "mediaTrait",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

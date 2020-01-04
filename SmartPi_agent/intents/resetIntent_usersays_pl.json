@@ -1,0 +1,200 @@
+[
+  {
+    "id": "38dcc9e7-94fd-427b-8483-c7ff6168f23a",
+    "data": [
+      {
+        "text": "wentylator",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "da248ce7-0b0e-4af6-8025-cf8202053176",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " i wentylator",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "126be810-d02b-421a-aca0-423bdd449e2b",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d3451f35-c8bd-4c7c-8195-6b6319abc1e5",
+    "data": [
+      {
+        "text": "Zresetuj",
+        "alias": "reset",
+        "meta": "@reset",
+        "userDefined": false
+      },
+      {
+        "text": " timer ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "Kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e4ed05ca-9bd3-4d6c-9366-4586c6ee9975",
+    "data": [
+      {
+        "text": "Resetuj",
+        "alias": "reset",
+        "meta": "@reset",
+        "userDefined": true
+      },
+      {
+        "text": " timer ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6554ea49-c7aa-46d9-8146-118d325c8ed0",
+    "data": [
+      {
+        "text": "Światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "resetuj",
+        "alias": "reset",
+        "meta": "@reset",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " timery.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a8785f48-0454-401a-bdb3-c48b183715fb",
+    "data": [
+      {
+        "text": "Resetuj",
+        "alias": "reset",
+        "meta": "@reset",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " timery ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": true
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

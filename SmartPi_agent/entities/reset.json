@@ -1,0 +1,9 @@
+{
+  "id": "60db07f0-beaf-43e2-a4fc-52a51e050e35",
+  "name": "reset",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

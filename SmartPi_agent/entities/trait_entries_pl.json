@@ -1,0 +1,37 @@
+[
+  {
+    "value": "ON",
+    "synonyms": [
+      "włącz",
+      "zaświeć",
+      "załącz"
+    ]
+  },
+  {
+    "value": "OFF",
+    "synonyms": [
+      "wyłącz",
+      "zgaś",
+      "rozłącz"
+    ]
+  },
+  {
+    "value": "OPEN",
+    "synonyms": [
+      "otwórz",
+      "otwieraj",
+      "podnieś",
+      "podnoś",
+      "rozewrzyj"
+    ]
+  },
+  {
+    "value": "CLOSE",
+    "synonyms": [
+      "zamknij",
+      "zamykaj",
+      "opuść",
+      "zawrzyj"
+    ]
+  }
+]

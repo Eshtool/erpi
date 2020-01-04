@@ -1,0 +1,58 @@
+[
+  {
+    "value": "światło",
+    "synonyms": [
+      "światło",
+      "światła",
+      "oświetlenie",
+      "świateł"
+    ]
+  },
+  {
+    "value": "brama",
+    "synonyms": [
+      "brama",
+      "bramę",
+      "bramy"
+    ]
+  },
+  {
+    "value": "klimatyzator",
+    "synonyms": [
+      "klimatyzator",
+      "klimatyzatory",
+      "klimatyzacje",
+      "klimatyzacja",
+      "klima",
+      "klimatyzacji",
+      "klimatyzatora",
+      "klimy",
+      "klimatyzatorów"
+    ]
+  },
+  {
+    "value": "telewizor",
+    "synonyms": [
+      "telewizor",
+      "TV",
+      "telewizora",
+      "telewizory",
+      "telewizje"
+    ]
+  },
+  {
+    "value": "radio",
+    "synonyms": [
+      "radio",
+      "radia"
+    ]
+  },
+  {
+    "value": "wentylator",
+    "synonyms": [
+      "wentylator",
+      "wentylatora",
+      "wentylatory"
+    ]
+  }
+]

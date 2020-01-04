@@ -1,0 +1,44 @@
+[
+  {
+    "id": "2fe0ca8e-0595-475b-9c08-ae303d4551c5",
+    "data": [
+      {
+        "text": "Resetuj dom",
+        "alias": "scenarioTrait",
+        "meta": "@scenarioTrait",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c24852c9-4264-41f2-959d-4f3afa3badb8",
+    "data": [
+      {
+        "text": "Resetuj wszystkie urządzenia",
+        "alias": "scenarioTrait",
+        "meta": "@scenarioTrait",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "60bf8f50-7555-4955-84ad-3221f5ab39a4",
+    "data": [
+      {
+        "text": "wstaję",
+        "alias": "scenarioTrait",
+        "meta": "@scenarioTrait",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

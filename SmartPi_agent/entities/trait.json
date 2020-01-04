@@ -1,0 +1,9 @@
+{
+  "id": "b37d6a0d-67a8-4abe-a64c-52081b38d3b2",
+  "name": "trait",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

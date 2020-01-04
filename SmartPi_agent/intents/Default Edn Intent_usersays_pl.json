@@ -1,0 +1,152 @@
+[
+  {
+    "id": "b62bf62b-5547-4709-8569-e46f9725debe",
+    "data": [
+      {
+        "text": "Dziękuję.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "632d8266-ccb4-45d2-913a-7437340c0d63",
+    "data": [
+      {
+        "text": "Zakończ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "2bbfe716-9e66-4268-b675-b0f1ab03e8f9",
+    "data": [
+      {
+        "text": "to wszystko",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "02dcae4f-88e6-4faf-9280-012ad3a1ac00",
+    "data": [
+      {
+        "text": "to tyle już nic",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "21a947bb-7dc9-4aeb-b5d3-4addc87b0a08",
+    "data": [
+      {
+        "text": "już nic",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "616bffcf-3a83-4b53-85ab-085bfec157a8",
+    "data": [
+      {
+        "text": "nic",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c014b5da-6676-4fe1-8d82-1e23db7b47e8",
+    "data": [
+      {
+        "text": "Nie, to ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystko",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2572d2ff-015e-4bad-8366-b9d0fcd2b04f",
+    "data": [
+      {
+        "text": "Już nic.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a32a5b0c-2ceb-443d-879e-754454426d84",
+    "data": [
+      {
+        "text": "dziękuję, to ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystko",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "21aae5c3-301f-4e2a-b973-af6495361282",
+    "data": [
+      {
+        "text": "koniec",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "00a526d6-848a-423a-8975-0f039144252a",
+    "data": [
+      {
+        "text": "zakończ",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

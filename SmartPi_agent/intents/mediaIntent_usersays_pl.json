@@ -1,0 +1,1628 @@
+[
+  {
+    "id": "395d7932-b430-4e75-b88b-ff7741f48f29",
+    "data": [
+      {
+        "text": "ścisz",
+        "alias": "mediatrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "łazience",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5d5c986a-80f2-4b61-9d1a-12a8561c5194",
+    "data": [
+      {
+        "text": "No w kuchni",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "c9f4acbb-f055-42cc-94fd-7e54a36c4aca",
+    "data": [
+      {
+        "text": "ścisz",
+        "alias": "mediatrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "243826b4-ee54-48fc-a59e-9e2d92cc72e0",
+    "data": [
+      {
+        "text": "ścisz",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": true
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "303b8b77-b888-47ef-a341-b37a2e521d88",
+    "data": [
+      {
+        "text": "Ścisz",
+        "alias": "mediatrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "15",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c03db3f7-6339-4976-9d95-837e4bfe4743",
+    "data": [
+      {
+        "text": "Zwiększ nawiew",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "klimatyzacji",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": true
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "2",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "46750e96-2f91-4327-aca7-3b5ef37cbd20",
+    "data": [
+      {
+        "text": "klimatyzacja",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "gabinecie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "zmniejsz nawiew",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d4e1d614-8986-4b6e-ba78-0cb95351808b",
+    "data": [
+      {
+        "text": "klimatyzator",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "nawiew plus",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "3",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "05f54bf7-67aa-473b-ba59-3e09ae3c53c5",
+    "data": [
+      {
+        "text": "tryb auto",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "klimatyzacja",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "salon",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "944d5c87-aeea-4bb1-9256-916300a083ad",
+    "data": [
+      {
+        "text": "klimatyzacja",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": true
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "włącz",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "tryb automatyczny nawiewu",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3648b741-1b5b-4f94-baf6-48faf7fcfa42",
+    "data": [
+      {
+        "text": "klimatyzator",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "gabinecie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "nawiew tryb auto",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8885fafb-67d3-409c-be98-385e0a638dce",
+    "data": [
+      {
+        "text": "klimatyzator",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "zwiększ temperaturę",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "sypialni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "7",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "21cdf5ed-afd6-4e18-9b95-c0a63a635fae",
+    "data": [
+      {
+        "text": "salon",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "klimatyzator",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "zmniejsz temperaturę",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "5",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " stopni.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ca432dbc-3c3a-4424-bf0d-ebe63aa6f48b",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "przyciemnij",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": true
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "50",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "0d958586-3e42-4f66-8378-8f5014fdc802",
+    "data": [
+      {
+        "text": "zwiększ jasność",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światła",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "łązience",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": true
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "20",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " procent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "be43df68-4976-4981-b303-8be272cb9a3e",
+    "data": [
+      {
+        "text": "rozświetl",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światła",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " procent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "7dc48709-e9a5-4c70-a01f-4c814cc92741",
+    "data": [
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światła",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ciemniej",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "50",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "595deedc-1bbd-46c0-9d0f-63ca16da96d9",
+    "data": [
+      {
+        "text": "ciemniej",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "sypialni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "30",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " procent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fe527e65-824d-4b8e-a26e-53d0decda364",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "jaśniej",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "20",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " procent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "98b73e42-b32c-4713-8859-d5866ecdf5e6",
+    "data": [
+      {
+        "text": "jasność",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "15",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b644aa7f-628e-4d18-86ba-800ac5716eb5",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "salon",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ustaw jasność",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " na ",
+        "userDefined": false
+      },
+      {
+        "text": "30",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " procent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a38a02a5-d852-4f9b-be05-77c39590e1c5",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "salon",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ustaw jasność",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "30",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " procent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5779474e-8687-4d98-b425-93c396e1cda5",
+    "data": [
+      {
+        "text": "zmiejsz jasność",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światła",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": true
+      },
+      {
+        "text": " procent",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8b3ec7dd-5714-4eca-8b76-6a1060b327b9",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "salon",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "zwiększ jasność",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2a55eb79-6f38-4a57-85cb-7a126ab8dc83",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "salon",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "jasność plus",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "10",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "73d96360-984c-41c8-8a73-1eb6797e5002",
+    "data": [
+      {
+        "text": "telewizor",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "ścisz",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": true
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "5",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "9eed9c9c-5af4-469c-ae27-f3de8c3cf4c3",
+    "data": [
+      {
+        "text": "telewizor",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "następny kanał",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d4ee5c1b-a8e9-4f5a-b0fe-351a6cd70b1d",
+    "data": [
+      {
+        "text": "poprzedni kanał",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "telewizor",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "81fa2b6f-d8b7-484e-8da3-8f5377115d78",
+    "data": [
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "następny kanał",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5c63b53c-1ab9-4eb0-805a-17c5befb4fca",
+    "data": [
+      {
+        "text": "Zmień ",
+        "userDefined": false
+      },
+      {
+        "text": "program",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " na ",
+        "userDefined": false
+      },
+      {
+        "text": "1",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4431b82f-6b72-4496-a03a-5e869fa5c816",
+    "data": [
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kanał",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "7",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b6702349-2a8b-43b8-a91f-c50aebe97f1e",
+    "data": [
+      {
+        "text": "włącz kanał",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "5",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "telewizor",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a407c7ce-f59d-4c0f-8c52-936205bb96eb",
+    "data": [
+      {
+        "text": "wycisz",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e50f774e-6d3d-40f9-bc8d-566ae029f862",
+    "data": [
+      {
+        "text": "telewizor",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " salon ",
+        "userDefined": false
+      },
+      {
+        "text": "wycisz",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6cb33e92-d3ab-4e7f-9d78-4fd61144a6e6",
+    "data": [
+      {
+        "text": "wycisz",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d58f7c71-52c5-4def-88b1-c851e335aaf4",
+    "data": [
+      {
+        "text": "podgłośnij",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "15",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": true
+      },
+      {
+        "text": " radio ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d2eca7d8-fd85-41d0-9011-44c56af7e416",
+    "data": [
+      {
+        "text": "podgłośnij",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "15",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5a3b02e6-f224-4349-a08c-e96c66e4ba43",
+    "data": [
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "zcisz",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "20",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b5138aa7-85fd-47e3-a7a2-c993328b5ea9",
+    "data": [
+      {
+        "text": "Podgłośnij",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": true
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": true
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "5",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": ".",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8b388a5e-2d3c-4172-b7d0-7328509fe72e",
+    "data": [
+      {
+        "text": "telewizor",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "zcisz",
+        "alias": "mediaTrait",
+        "meta": "@mediaTrait",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "20",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      },
+      {
+        "text": " procent.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

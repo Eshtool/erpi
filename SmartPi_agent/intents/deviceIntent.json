@@ -1,0 +1,119 @@
+{
+  "id": "7082ee51-ae2e-465f-984a-e7c7cf4bd172",
+  "name": "deviceIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": true,
+      "affectedContexts": [
+        {
+          "name": "room",
+          "parameters": {},
+          "lifespan": 5
+        },
+        {
+          "name": "device",
+          "parameters": {},
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "7d64585f-7623-4c52-b974-58690da3e333",
+          "required": true,
+          "dataType": "@room",
+          "name": "room",
+          "value": "$room",
+          "prompts": [
+            {
+              "lang": "pl",
+              "value": "W którym pomieszczeniu?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "04a3a79f-5b7a-47ed-ab07-cd18f50723cd",
+          "required": true,
+          "dataType": "@trait",
+          "name": "trait",
+          "value": "$trait",
+          "prompts": [
+            {
+              "lang": "pl",
+              "value": "Co mam zrobić?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "a4a1dd3f-d3e8-427f-9d20-cee27655d19c",
+          "required": true,
+          "dataType": "@device",
+          "name": "device",
+          "value": "$device",
+          "prompts": [
+            {
+              "lang": "pl",
+              "value": "jakie urządzenie?"
+            },
+            {
+              "lang": "pl",
+              "value": "które urządzenie?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "31fc7e3b-71de-4d8f-a5e3-57ed62d36208",
+          "required": false,
+          "dataType": "@sys.time",
+          "name": "time",
+          "value": "$time",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "defaultValue": "false",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pl",
+          "condition": "",
+          "speech": [
+            "Nie zrozumiałam, proszę powtórz.",
+            "Możesz powtórzyć? To było dla mnie nie jasne.",
+            "To polecenie było dla mnie niejasne. Możesz powtórzyć?",
+            "Czy możesz powtórzyć? Nie zrozumiałam."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

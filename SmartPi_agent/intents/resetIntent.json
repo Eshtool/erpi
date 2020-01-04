@@ -1,0 +1,73 @@
+{
+  "id": "42e38d9b-5bc3-4adf-b849-5fe28af90727",
+  "name": "resetIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "488e2afc-c15b-4a80-9401-9582553bba54",
+          "required": false,
+          "dataType": "@room",
+          "name": "room",
+          "value": "$room",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "401cf6d9-be35-4194-baae-bc28ca672fec",
+          "required": false,
+          "dataType": "@device",
+          "name": "device",
+          "value": "$device",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "1103acba-cb74-4e54-bb52-ad6173313edb",
+          "required": false,
+          "dataType": "@reset",
+          "name": "reset",
+          "value": "$reset",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pl",
+          "condition": "",
+          "speech": [
+            "Czy możesz powtórzyć? Nie zrozumiałam.",
+            "To polecenie było dla mnie niejasne. Możesz powtórzyć?",
+            "Możesz powtórzyć? To było dla mnie nie jasne.",
+            "Nie zrozumiałam, proszę powtórz."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

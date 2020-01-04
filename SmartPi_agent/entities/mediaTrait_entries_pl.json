@@ -1,0 +1,132 @@
+[
+  {
+    "value": "volume up",
+    "synonyms": [
+      "podgłośnij",
+      "głośniej",
+      "podgłoś",
+      "zgłośnij",
+      "zgłoś",
+      "zwiększ głośność",
+      "głośność plus"
+    ]
+  },
+  {
+    "value": "volume down",
+    "synonyms": [
+      "ścisz",
+      "ciszej",
+      "zmiejsz głośność",
+      "głośność minus"
+    ]
+  },
+  {
+    "value": "mute",
+    "synonyms": [
+      "wycisz",
+      "głośność 0",
+      "głośność zero",
+      "mute"
+    ]
+  },
+  {
+    "value": "channel",
+    "synonyms": [
+      "włącz kanał",
+      "utaw kanał",
+      "włącz program",
+      "kanał",
+      "program"
+    ]
+  },
+  {
+    "value": "next channel",
+    "synonyms": [
+      "następny kanał",
+      "kolejny kanał"
+    ]
+  },
+  {
+    "value": "previous channel",
+    "synonyms": [
+      "poprzedni kanał"
+    ]
+  },
+  {
+    "value": "luminosity up",
+    "synonyms": [
+      "jaśniej",
+      "rozjaśnij",
+      "zwiększ jasność",
+      "jasność plus",
+      "rozświetl"
+    ]
+  },
+  {
+    "value": "luminosity down",
+    "synonyms": [
+      "ciemniej",
+      "ściemnij",
+      "zmiejsz jasność",
+      "jasność minus",
+      "przygaś",
+      "przyciemnij"
+    ]
+  },
+  {
+    "value": "luminosity",
+    "synonyms": [
+      "ustaw jasność",
+      "jasność"
+    ]
+  },
+  {
+    "value": "temperature up",
+    "synonyms": [
+      "zwiększ temperaturę",
+      "temperatura plus",
+      "podnieś temperaturę",
+      "powiększ temperaturę",
+      "temperatura więcej"
+    ]
+  },
+  {
+    "value": "temperature down",
+    "synonyms": [
+      "zmniejsz temperaturę",
+      "pomniejsz temperaturę",
+      "temperatura minus",
+      "obniż temperaturę",
+      "temperatura mniej"
+    ]
+  },
+  {
+    "value": "airflow auto",
+    "synonyms": [
+      "nawiew auto",
+      "nawiew tryb auto",
+      "nawiew automatycznie",
+      "nawiew automatyczny",
+      "tryb automatyczny nawiewu",
+      "tryb auto",
+      "tryb automatyczny",
+      "auto"
+    ]
+  },
+  {
+    "value": "airflow up",
+    "synonyms": [
+      "zwiększ nawiew",
+      "nawiew plus",
+      "większy nawiew"
+    ]
+  },
+  {
+    "value": "airflow down",
+    "synonyms": [
+      "zmniejsz nawiew",
+      "nawiew minus",
+      "mniejszy nawiew"
+    ]
+  }
+]

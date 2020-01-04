@@ -1,0 +1,122 @@
+[
+  {
+    "id": "38594622-9f31-43bf-8000-846695766227",
+    "data": [
+      {
+        "text": "Włącz buty w łazience",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "46929a52-ffec-49c2-9a6c-ad75d6d843f6",
+    "data": [
+      {
+        "text": "ekspres mi Nastaw na kawę",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "ac239344-8824-4aca-b269-6be26303df57",
+    "data": [
+      {
+        "text": "otwórz bramę garażową w łazience",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5f65b1e4-e875-46b8-b197-88bc3e687303",
+    "data": [
+      {
+        "text": "kuchni",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a245779d-ba20-4106-b3cc-3cb07db1ae24",
+    "data": [
+      {
+        "text": "parapet",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "023c0e32-854c-4896-827f-e98eb389c94f",
+    "data": [
+      {
+        "text": "kuchni kuchnia",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "f7c097bd-606d-4d66-b462-3383c4adf5ba",
+    "data": [
+      {
+        "text": "turn on the Kitchen Light",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e388d9cb-47bf-4538-ab83-f7103f2051ad",
+    "data": [
+      {
+        "text": "Kitten",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "84ad710d-226d-4b95-b999-56c50b6f1aa3",
+    "data": [
+      {
+        "text": "turn on",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6a53f70c-a052-4ae3-a783-22a4c4444260",
+    "data": [
+      {
+        "text": "Zresetuj wszystkie Timer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

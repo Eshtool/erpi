@@ -1,0 +1,112 @@
+{
+  "id": "60d31de5-13eb-4ec9-b90a-c736506d31cf",
+  "name": "mediaIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "5288ce2c-2ffa-4106-a390-e4ec7c66b4db",
+          "required": false,
+          "dataType": "@device",
+          "name": "device",
+          "value": "$device",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "03a7429b-6e95-4eb3-b9d0-e541ebe2b033",
+          "required": true,
+          "dataType": "@room",
+          "name": "room",
+          "value": "$room",
+          "prompts": [
+            {
+              "lang": "pl",
+              "value": "w którym pomieszczeniu?"
+            },
+            {
+              "lang": "pl",
+              "value": "gdzie?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "8ece8846-b3be-49ca-ada8-5e6dc8cdef9e",
+          "required": true,
+          "dataType": "@mediaTrait",
+          "name": "mediaTrait",
+          "value": "$mediaTrait",
+          "prompts": [
+            {
+              "lang": "pl",
+              "value": "co mam zrobić?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "75e5fa36-c792-449c-99f4-1502cdeb449b",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "prompts": [
+            {
+              "lang": "pl",
+              "value": "ile?"
+            },
+            {
+              "lang": "pl",
+              "value": "jaka wartość?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "defaultValue": "1",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pl",
+          "condition": "",
+          "speech": [
+            "Nie zrozumiałam, proszę powtórz.",
+            "Możesz powtórzyć? To było dla mnie nie jasne.",
+            "To polecenie było dla mnie niejasne. Możesz powtórzyć?",
+            "Czy możesz powtórzyć? Nie zrozumiałam."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

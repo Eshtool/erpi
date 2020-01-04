@@ -1,0 +1,92 @@
+[
+  {
+    "value": "kuchnia",
+    "synonyms": [
+      "kuchnia",
+      "kuchni"
+    ]
+  },
+  {
+    "value": "salon",
+    "synonyms": [
+      "salon",
+      "salonie",
+      "duży pokój",
+      "dużym pokoju",
+      "salonu"
+    ]
+  },
+  {
+    "value": "korytarz",
+    "synonyms": [
+      "korytarz",
+      "korytarzu"
+    ]
+  },
+  {
+    "value": "łazienka",
+    "synonyms": [
+      "łazienka",
+      "łazience"
+    ]
+  },
+  {
+    "value": "toaleta",
+    "synonyms": [
+      "wc",
+      "toaleta",
+      "toalecie",
+      "ubikacja",
+      "ubikacji",
+      "kibel",
+      "kiblu",
+      "sracz",
+      "sraczu"
+    ]
+  },
+  {
+    "value": "garaż",
+    "synonyms": [
+      "garaż",
+      "garażu",
+      "garażową",
+      "garażowa",
+      "garażowe"
+    ]
+  },
+  {
+    "value": "sypialnia",
+    "synonyms": [
+      "sypialnia",
+      "sypialni",
+      "spalni"
+    ]
+  },
+  {
+    "value": "pokój dziecięcy",
+    "synonyms": [
+      "pokój dziecięcy",
+      "pokoju dziecięcym",
+      "sypialnia dziecka",
+      "sypialni dziecka"
+    ]
+  },
+  {
+    "value": "gabinet",
+    "synonyms": [
+      "gabinet",
+      "gabinecie"
+    ]
+  },
+  {
+    "value": "wszystkie",
+    "synonyms": [
+      "wszystkie",
+      "każde",
+      "wszystko",
+      "całe",
+      "wszędzie",
+      "wszystkich"
+    ]
+  }
+]

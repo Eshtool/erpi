@@ -1,0 +1,43 @@
+[
+  {
+    "value": "wakeing up",
+    "synonyms": [
+      "pobudka",
+      "obudziłem się",
+      "obudziłam się",
+      "wstaję",
+      "poranek"
+    ]
+  },
+  {
+    "value": "going sleep",
+    "synonyms": [
+      "idę spać",
+      "dobranoc",
+      "spać",
+      "sen",
+      "uśpij dom"
+    ]
+  },
+  {
+    "value": "going out",
+    "synonyms": [
+      "wychodzę",
+      "opuszczam dom",
+      "wyjście z domu",
+      "wychodzimy"
+    ]
+  },
+  {
+    "value": "home reset",
+    "synonyms": [
+      "resetuj dom",
+      "reset domu",
+      "resetuj wszystko",
+      "reset wszystkiego",
+      "resetuj wszystkie urządzenia",
+      "zresetuj dom",
+      "zresetuj wszystko"
+    ]
+  }
+]

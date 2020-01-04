@@ -1,0 +1,59 @@
+{
+  "id": "9c981bc7-45c4-4106-9d81-182136c97808",
+  "name": "scenarioIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "5287c5b2-e274-4c4a-aed2-47af427f359b",
+          "required": true,
+          "dataType": "@scenarioTrait",
+          "name": "scenarioTrait",
+          "value": "$scenarioTrait",
+          "prompts": [
+            {
+              "lang": "pl",
+              "value": "Co mam zrobić?"
+            },
+            {
+              "lang": "pl",
+              "value": "Możesz powtórzyć?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pl",
+          "condition": "",
+          "speech": [
+            "Nie zrozumiałam, proszę powtórz.",
+            "Możesz powtórzyć? To było dla mnie nie jasne.",
+            "To polecenie było dla mnie niejasne. Możesz powtórzyć?",
+            "Czy możesz powtórzyć? Nie zrozumiałam."
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

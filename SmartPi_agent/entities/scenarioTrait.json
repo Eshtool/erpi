@@ -1,0 +1,9 @@
+{
+  "id": "c2ef3b73-02b1-4990-921a-690b0daaf954",
+  "name": "scenarioTrait",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

@@ -1,0 +1,560 @@
+[
+  {
+    "id": "e10a1d14-b07d-4203-bcee-ab81ba5144ea",
+    "data": [
+      {
+        "text": "Włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "łazience",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "ba158c1b-d2c8-42d5-8696-a8b181e8635d",
+    "data": [
+      {
+        "text": "Włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wentylator",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "8b19e030-2869-476e-bb3b-085e7b57ba87",
+    "data": [
+      {
+        "text": "Włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "8c425626-9f8f-49cc-b9ab-aa6ed007bded",
+    "data": [
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "updated": 0
+  },
+  {
+    "id": "ff454a5d-7377-496e-a232-0919f808fa7d",
+    "data": [
+      {
+        "text": "Włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "88fcb106-2c99-42ff-8448-4091a28b05bf",
+    "data": [
+      {
+        "text": "Włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 2,
+    "updated": 0
+  },
+  {
+    "id": "73a57679-77d6-4a3f-b5e7-d4391a67d2de",
+    "data": [
+      {
+        "text": "Włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "salon",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "0c250f87-ba51-4506-9098-eef3e90636b2",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "20.15",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3bbb4c61-7df7-470d-9bae-fa81cb6b38d4",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "za 15 minut",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "61b85a88-de59-4fe9-bd3c-2e956ed5f5e8",
+    "data": [
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "efabe6de-cb4c-4b02-baf6-3f3663f7d45d",
+    "data": [
+      {
+        "text": "włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "wszystkie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światła",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "za godzinę",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "abc165a3-cd7a-40b2-a5d3-49ccdb5d1396",
+    "data": [
+      {
+        "text": "o ",
+        "userDefined": false
+      },
+      {
+        "text": "7.20",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "łazience",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ec70c993-c01d-42a7-b813-7520eb17dc54",
+    "data": [
+      {
+        "text": "wyłącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "radio",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " o ",
+        "userDefined": false
+      },
+      {
+        "text": "17.45",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ffd18f35-7b56-4c62-9c3f-8c624b2e67e7",
+    "data": [
+      {
+        "text": "włącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "telewizor",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "salonie",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "za 15 minut",
+        "alias": "time",
+        "meta": "@sys.time",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a75db2e5-e20b-4d6e-a33b-670f2a6b22fa",
+    "data": [
+      {
+        "text": "wyłącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchnia",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "57444f9c-43d6-4b30-9799-a1b95e1391d2",
+    "data": [
+      {
+        "text": "wyłącz",
+        "alias": "trait",
+        "meta": "@trait",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "światło",
+        "alias": "device",
+        "meta": "@device",
+        "userDefined": false
+      },
+      {
+        "text": " w ",
+        "userDefined": false
+      },
+      {
+        "text": "kuchni",
+        "alias": "room",
+        "meta": "@room",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
